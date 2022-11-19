@@ -2,8 +2,8 @@
 
 :root {
 	--dark-color-a: #667aff;
-	--dark-color-b: #7386ff;
-	--light-color: #e6e9ff;
+	--dark-color-b: #98a6ff;
+	--dark-color-b: #9da9ff;
 	--success-color: #5cb85c;
 	--error-color: #d9534f;
 }
@@ -12,13 +12,21 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	/* height: 100vh; */
 }
 
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
-	background: var(--light-color);
+	/* background: var(--dark-color-b); */
+	background-image: url(./images/blob-scene-haikei.svg);
+	/* background: #777; */
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 	margin: 20px;
+	height: 100vh;
+	overflow-y: hidden;
 }
 
 ul {
@@ -32,19 +40,25 @@ a {
 .btn {
 	cursor: pointer;
 	padding: 5px 15px;
-	background: var(--light-color);
-	color: var(--dark-color-a);
+	background: #0015b5;
+	
+	/* color: var(--dark-color-a); */
+	color: aliceblue;
 	border: 0;
+	border-radius: 8px;
 	font-size: 17px;
 }
 
 /* Chat Page */
 
 .chat-container {
-	max-width: 1100px;
+	max-width: 60rem;
 	background: #fff;
 	margin: 30px auto;
 	overflow: hidden;
+	border: 0;
+	border-radius: 8px;
+
 }
 
 .chat-header {
@@ -61,6 +75,7 @@ a {
 .chat-main {
 	display: grid;
 	grid-template-columns: 1fr 3fr;
+	max-height: 60vh;
 }
 
 .chat-sidebar {
@@ -75,6 +90,7 @@ a {
 	background: rgba(0, 0, 0, 0.1);
 	padding: 10px;
 	margin-bottom: 20px;
+	border-radius: 8px;
 }
 
 .chat-sidebar h3 {
@@ -87,27 +103,29 @@ a {
 
 .chat-messages {
 	padding: 30px;
-	max-height: 500px;
+	max-height: 60vh;
 	overflow-y: scroll;
 }
 
 .chat-messages .message {
 	padding: 10px;
 	margin-bottom: 15px;
-	background-color: var(--light-color);
-	border-radius: 5px;
+	background-color: var(--dark-color-b);
+	border-radius: 10px;
+	width: fit-content;
 }
 
 .chat-messages .message .meta {
 	font-size: 15px;
 	font-weight: bold;
-	color: var(--dark-color-b);
-	opacity: 0.7;
+	/* color: var(--dark-color-a); */
+	color: #0015b5;
+	/* opacity: 0.7; */
 	margin-bottom: 7px;
 }
 
 .chat-messages .message .meta span {
-	color: #777;
+	color: rgb(50, 49, 49);
 }
 
 .chat-form-container {
@@ -122,14 +140,17 @@ a {
 .chat-form-container input[type='text'] {
 	font-size: 16px;
 	padding: 5px;
+	margin-right: 1rem;
 	height: 40px;
 	flex: 1;
+	border: 0;
+	border-radius: 8px;
 }
 
 /* Join Page */
 .join-container {
 	max-width: 500px;
-	margin: 80px auto;
+	margin: 6rem auto;
 	color: #fff;
 }
 
@@ -144,6 +165,7 @@ a {
 .join-main {
 	padding: 30px 40px;
 	background: var(--dark-color-b);
+
 }
 
 .join-main p {
@@ -164,6 +186,8 @@ a {
 	padding: 5px;
 	height: 40px;
 	width: 100%;
+	border: 0;
+	border-radius: 8px;
 }
 
 .join-main select {
@@ -171,6 +195,8 @@ a {
 	padding: 5px;
 	height: 40px;
 	width: 100%;
+	border: 0;
+	border-radius: 8px;
 }
 
 .join-main .btn {
@@ -185,5 +211,8 @@ a {
 
 	.chat-sidebar {
 		display: none;
+	}
+	body{
+		background-image: url(./images/blob-scene-haikei-verti.svg);
 	}
 }
